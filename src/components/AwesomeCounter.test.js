@@ -2,6 +2,12 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import AwesomeCounter from "./AwesomeCounter";
 
+/*
+	screen.debug() -> console.log body of HTML that Test Function see.
+	screen.getByRole('') -> Display Error and list all the role, role are buttons, headers, inputs
+	screen.getByRole('button',{name : "Add"})
+*/
+
 test("it should have the correct intial value when set to 7", () => {
   render(<AwesomeCounter initialValue={7} />);
   const count = screen.queryByText(7);
